@@ -1,0 +1,21 @@
+{
+  "name": "Python + MySQL + Streamlit",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "8.0",
+      "mysqlDatabase": "testdb",
+      "mysqlUser": "testuser",
+      "mysqlPassword": "testpass"
+    }
+  },
+
+  "postCreateCommand": "python -m venv venv && . venv/bin/activate && pip install streamlit mysql-connector-python",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
